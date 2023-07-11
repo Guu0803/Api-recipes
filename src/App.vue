@@ -1,30 +1,66 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div class="window">
+    <div class="header">
+      <div >
+        <img src="@/assets/logo.png" class="logo">
+      </div>
+      <div>
+        <input type="search" placeholder="O que está procurando?" class="search">
+        <button>
+          Pesquisar
+        </button>
+      </div>
+      <div class="find">
+        Descubra
+      </div>
+    </div>
+    <router-view />
+  </div>
 </template>
-
+<script>
+</script>
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+body {
+  margin: 0;
 }
 
-nav {
-  padding: 30px;
+.window {
+  height: 100vh;
+  width: 100%;
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #1f1f1f;
+}
+.logo {
+  height: 7vh;
+}
+.search {
+  height: 5vh;
+  border: 2px solid #c6c6c6;
+  font-size: 2vh;
 }
 
-nav a.router-link-exact-active {
-  color: #42b983;
+button {
+  padding: 1vh 2vw;
+  background-color: #c6c6c6;
+  border: none;
+  height: 5vh;
+  color: white;
+  cursor: pointer;
 }
-</style>
+
+.find {
+  height: 5vh;
+  color: white;
+  font-size: 3vh;
+  background-color: #818181;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1vh 2vw;
+
+}</style>
