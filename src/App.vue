@@ -1,11 +1,11 @@
 <template>
   <div class="window">
     <div class="header">
-      <div >
+      <div v-on:click="toHome()" >
         <img src="@/assets/logo.png" class="logo">
       </div>
       <div>
-        <input type="search" placeholder="O que está procurando?" class="search">
+        <input type="search" placeholder="O que está procurando?" class="search" v-model="input">
         <button>
           Pesquisar
         </button>
@@ -18,6 +18,23 @@
   </div>
 </template>
 <script>
+export default {
+  data(){
+    return{
+      input:''
+    }
+  },
+  methods:{
+    toHome(){
+      this.$router.push('/')
+    }
+  },
+  watch:{
+    input(value){
+      this.$store.commit('textAtt', value)
+    }
+  }
+}
 </script>
 <style>
 body {

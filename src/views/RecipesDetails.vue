@@ -1,35 +1,23 @@
 <template>
-  <div class="about">
-    detalhes da receita
-  </div>
   <div>
-    <!-- {{ this.cor }}
-    {{ this.idade }} -->
-    {{ this.recipesList }}
+    <div>
+     {{ recipeID }}
+    </div>
   </div>
-  <RouterLink to="/">
-    home
-  </RouterLink>
 </template>
 <script>
 export default {
   name:'recipesDetails',
   data (){
     return {
-      cor:"",
-      idade: 0,
-      recipesList: []
+      recipesList: [],
+      recipeID:{}
     }
   },
-  created() {
-    this.recipesList = this.$store.state.recipesList
-
-    // let info = this.$store.getters.pegarCorEIdade()
-    // this.cor = info.cor
-    // this.idade = info.idade
+  created(){
+    this.recipeID = this.$route.params.recipeID
+    
   }
-
-
 }
 
 </script>

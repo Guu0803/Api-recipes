@@ -1,8 +1,7 @@
 import { createStore } from 'vuex'  
 export default createStore({
     state:{
-        cor:"",
-        idade:0,
+        searchText: '--',
         recipesList:[]
     },
     getters:{
@@ -17,16 +16,8 @@ export default createStore({
         atualizarCor(state, valor){
             state.cor = valor
         },
-        atualizarIdade(state, valor){
-            state.idade = valor
-        },
-        atualizarIdadeECor(state, objeto){
-            state.idade =  objeto.idade
-            state.cor = objeto.cor
-        },
-        pegarReceitas(state, objeto){
-            console.log("1 2 3")
-            state.recipesList = objeto
+        textAtt(state, value){
+            state.searchText = value
         }
     },
     actions:{},
