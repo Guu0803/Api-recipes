@@ -26,9 +26,14 @@ export default {
 
 }
 .conteiner-loading {
+    width: 3vw;
+    height: 3vw;
     padding: 1vw;
     background-color: black;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .loading {
     font-size: 5vh;
